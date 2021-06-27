@@ -35,14 +35,20 @@ console.log(myObject)
 /* EXERCISE 3
 Add to the previously created object a boolean value to rappresent wheter you have or not a driving license. Call it "hasDrivingLicense"
 */
+
 myObject.hasDrivingLicense = true
+
+//myObject["hasDrivingLicense"] = true
+
 console.log(myObject)
 
 /* EXERCISE 4
 Remove from the previously created object the age property.
 */
+
 delete myObject.age
 console.log(myObject)
+
 /* EXERCISE 5
 Create another object called "anotherObject" with name, surname, email address and verify that this object has a different email address than the previous one.
 */
@@ -54,45 +60,33 @@ const anotherObject = {
 }
 let emailVerification = anotherObject["email"] === myObject["email"]
 console.log(emailVerification)
+
 /* EXERCISE 6
 You are working on an e-commerce website. In the variable totalShoppingCart you are storing the total amount spent by the current user.
 Currently you have a promotion: if the customer's shopping cart total is more than 50, the user is eligible for free shipping (otherwise it costs 10).
 Write an algorithm that calculates the total cost to charge the user with.
 */
 
-function ex6(grossTotal) {
-  /* WRITE YOUR CODE HERE */
-  if (grossTotal <= 50){
-    grossTotal += 10
-  }else{
-    console.log("free shipping")
-  }
-     // totalShoppingCart totalShoppingCart + 10
-  return grossTotal
-}
-
-let grossTotal = totalShoppingCart
-
-console.log(ex6(grossTotal)) // expected free shipping if totalShoppingCart is higher than 50.
-
+ let totalShoppingCart = 100
+ if (totalShoppingCart <= 50){
+    console.log("total and shipping charges:", totalShoppingCart += 10)
+ }else{
+    console.log("free shipping total:", totalShoppingCart)
+ }
+    
 
 /* EXERCISE 7
 You are working on an e-commerce website. Today is Black Friday and everything has a 20% discount at the end of the purchase.
 Modify the previous answer inserting this information and, applying the same rules for the shipping cost, calculate the totalCost.
 */
 
-function ex7(grossTotal){
-  if ( grossTotal <= 50){
-    console.log("free")
-  }else{
-    grossTotal += 10
-  }   // totalShoppingCart = totalShoppingCart + 10
-  let discount = grossTotal * 0.2
-  grossTotal = grossTotal - discount        
-return grossTotal
+let discount = totalShoppingCart * 0.2
+totalShoppingCart = totalShoppingCart - discount
+if (totalShoppingCart <= 50){
+  console.log("total and shipping charges:", totalShoppingCart += 10)
+}else{
+  console.log("free shipping total:", totalShoppingCart)
 }
-
-console.log(ex7(totalShoppingCart)) // expected 20% discount and free shipping if discounted price is higher than 50. Other wise, 20% discounted price and +10$ of shipping charged.
 
 /* EXERCISE 8
 Create an object representing a car with properties like "brand", "model", "licensePlate".
@@ -102,21 +96,23 @@ After you create the first car, clone it 5 times and change the "licensePlate" f
 const car = {
   brand: "Benz",
   model: "A3448",
-  licensePlate : "A5837",
+  licensePlate : "A5830",
 }
 const car1 = {}
 Object.assign(car1, car)
-car1.licensePlate = "A5838"
+car1.licensePlate = "A5831"
 const car2 = {}
 Object.assign(car2, car)
-car2.licensePlate = "A5839"
+car2.licensePlate = "A5832"
 const car3 = {}
 Object.assign(car3, car)
-car3.licensePlate = "A5830"
+car3.licensePlate = "A5833"
 const car4 = {}
 Object.assign(car4, car)
-car4.licensePlate = "A5832"
-
+car4.licensePlate = "A5834"
+const car5 = {}
+Object.assign(car5, car)
+car5.licensePlate = "A5835"
 
 /* WRITE YOUR CODE HERE */
 
@@ -124,7 +120,8 @@ car4.licensePlate = "A5832"
 Create a new array called "carsForRent" containing all the cars from the previous exercise.
 */
 
-const carsForRent = [car1, car2, car3, car4, car5,]
+const carsForRent = [car1, car2, car3, car4, car5]
+console.log(carsForRent)
 
 /* WRITE YOUR CODE HERE */
 
