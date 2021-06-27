@@ -12,11 +12,9 @@ You can use the bash terminal, the VSCode terminal or the one embedded in your O
 Create an array containing the first 5 positive numbers.
 */
 
-function ex1() {
-   const myArray = [1, 2, 3, 4, 5]
-   return myArray
-}
-
+let myArray = [1, 2, 3, 4, 5]
+console.log(myArray)
+  
 /* EXERCISE 2
 Create an object "myObject" containing exactly your "name", "surname", "email", "address" and "age".
 */
@@ -32,16 +30,19 @@ const myObject = {
   },
   age : 25,
 }
+console.log(myObject)
 
 /* EXERCISE 3
 Add to the previously created object a boolean value to rappresent wheter you have or not a driving license. Call it "hasDrivingLicense"
 */
 myObject.hasDrivingLicense = true
+console.log(myObject)
 
 /* EXERCISE 4
 Remove from the previously created object the age property.
 */
 delete myObject.age
+console.log(myObject)
 /* EXERCISE 5
 Create another object called "anotherObject" with name, surname, email address and verify that this object has a different email address than the previous one.
 */
@@ -70,7 +71,6 @@ function ex6(grossTotal) {
   return grossTotal
 }
 
-let totalShoppingCart = 100
 let grossTotal = totalShoppingCart
 
 console.log(ex6(grossTotal)) // expected free shipping if totalShoppingCart is higher than 50.
@@ -81,7 +81,6 @@ You are working on an e-commerce website. Today is Black Friday and everything h
 Modify the previous answer inserting this information and, applying the same rules for the shipping cost, calculate the totalCost.
 */
 
-let totalShoppingCart = 100
 function ex7(grossTotal){
   if ( grossTotal <= 50){
     console.log("free")
@@ -168,13 +167,3 @@ for(let car of carsForSale){
 
 
 
-module.exports = {
-  ex1,
-  myObject,
-  anotherObject,
-  ex6,
-  ex7,
-  carsForRent,
-  carsForSale,
-  totalCars
-}
