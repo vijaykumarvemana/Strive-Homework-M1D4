@@ -127,23 +127,23 @@ console.log(carsForRent)
 
 /* EXERCISE 10
 Remove the first and the last car from the carsForRent array.
+*/
 
-*/let removeFirst = carsForRent.shift()
+let removeFirst = carsForRent.shift()
   console.log(removeFirst)
   let removeLast = carsForRent.pop()
   console.log(removeLast)
-  
-   
-
-/* WRITE YOUR CODE HERE */
+  console.log(carsForRent)
 
 /* EXERCISE 11
 Print in the console the TYPES of the car variable, of its licensePlate and brand properties.
 */
+
  console.log(typeof car)
  console.log(typeof car["licensePlate"])
  console.log(typeof car["brand"])
-/* WRITE YOUR CODE HERE */
+
+ /* WRITE YOUR CODE HERE */
 
 /* EXERCISE 12
 Create a new array called carsForSale and insert 3 cars in it.
@@ -152,8 +152,12 @@ Store in a variable totalCars the number of cars present in both carsForSale and
 
 const carsForSale = [car1, car2, car3]
 
-const totalCars = carsForSale.concat(carsForRent)
-
+let totalCars = carsForSale.concat(carsForRent)
+totalCars = {
+  carsForSale: carsForSale.length,
+  carsForRent: carsForRent.length
+}
+console.log(totalCars)
 /* EXERCISE 13
 Print in the console the data from each car in the carsForSale array.
 */
