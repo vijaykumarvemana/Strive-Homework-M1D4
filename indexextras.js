@@ -37,30 +37,43 @@ console.log(revertArray)
 /* EXERCISE 2
 Write the code to get the maximum value in an array.
 */
-let array = [4, 6, 10, 45,290, 100]
-let firstValue = array[0];
-for (let i = 1; i < array.length; i++) {
-        if (array[i] > firstValue) {
-           firstValue  = array[i];
+
+let maxArray = [4, 6, 10, 45,290, 100]
+let maxValue = maxArray[0]
+for (let i = 1; i < maxArray.length; i++) {
+        if (maxArray[i] > maxValue) {
+           maxValue  = maxArray[i]
         }
     }
-console.log(firstValue)
+console.log(maxValue)
 
 /* EXERCISE 3
 Write the code to get the minimum value in an array.
 */
 
-function ex3(array){
-  // return 
+let minarray = [4, 5 ,45, 1, 8, 540]
+let minvalue = minarray[0]
+for (let i = 1; i < minarray.length; i++){
+  if (minarray[i] < minvalue) {
+     minvalue  = minarray[i]
+  }
 }
+console.log(minvalue)
 
 /* EXERCISE 4
 Write the code to get only even numerical values in an array.
 */
+let arrayDiff = [1, 5, 4, 2, 3, 10,]
 
-function ex4(array){
-  // return 
+let evenNumbersArray = []
+
+for (let i = 0; i < arrayDiff.length; i++) {
+  if (arrayDiff[i] % 2 === 0){
+    evenNumbersArray.push(arrayDiff[i])
+  }     
 }
+console.log(evenNumbersArray)
+
 /* WRITE YOUR CODE HERE */
 
 /* EXERCISE 5
