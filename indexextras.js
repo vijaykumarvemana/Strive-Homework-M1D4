@@ -15,49 +15,36 @@ es:
 */
 
 const myArray = [1,3,5]
-
-function ex1(inputArray) {
   let leftIndex = 0
-  let rightIndex = inputArray.length - 1
+  let rightIndex = myArray.length - 1
   while(leftIndex < rightIndex){
-    let temp = inputArray[leftIndex]
-    inputArray[leftIndex] = inputArray[rightIndex]
-    inputArray[rightIndex] = temp
+    let temp = myArray[leftIndex]
+    myArray[leftIndex] = myArray[rightIndex]
+    myArray[rightIndex] = temp
     leftIndex ++
     rightIndex --
   }  
-//console.log(myArray);
-  return inputArray
-}
-console.log(ex1(myArray)) //expected: [5,3,1]
+  console.log(myArray)
+
 //another way by using reverse method
+
 let inputArray = [1, 2, 3, 4]
- let revertArray = inputArray.reverse()
- console.log(revertArray)
+let revertArray = inputArray.reverse()
+console.log(revertArray)
 
 /* WRITE YOUR CODE HERE */
 
 /* EXERCISE 2
 Write the code to get the maximum value in an array.
 */
-
-/* WRITE YOUR CODE HERE */
-
-function ex2(array) {
-  let firstValue = array[0];
-
-    for (let i = 1; i < array.length; i++) {
+let array = [4, 6, 10, 45,290, 100]
+let firstValue = array[0];
+for (let i = 1; i < array.length; i++) {
         if (array[i] > firstValue) {
            firstValue  = array[i];
         }
     }
-    return firstValue;
-  // return 
-}
-let array = [4, 6, 10, 45,290, 100]
-console.log(ex2(array))
-
-console.log(Math.max(1, 3, 2));
+console.log(firstValue)
 
 /* EXERCISE 3
 Write the code to get the minimum value in an array.
